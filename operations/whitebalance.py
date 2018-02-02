@@ -139,7 +139,6 @@ if __name__=="__main__":
     #img.show()
     #to_pil(stretch(from_pil(img))).show()
     img_stretch = stretch(img)
-    cv2.imshow("normal", img)
     cv2.imshow("stretch", stretch(img))
     cv2.imshow("grey_world", grey_world(img))
     cv2.imshow("retinex", retinex(img))
