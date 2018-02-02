@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 '''
 author: Tobi
 
@@ -65,6 +65,7 @@ experiments = []
 experiments.append(Exp(img, "Input"))
 experiments.append(Exp(grey_world(img), "Grey world"))
 experiments.append(Exp(retinex(img), "Retinex"))
+experiments.append(Exp(retinex_adjust(img), "Retinex Adjust"))
 experiments.append(Exp(contrast(img,fac=2.), "Contrast:2"))
 experiments.append(Exp(contrast(img,fac=.5), "Contrast:.5"))
 
