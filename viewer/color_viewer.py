@@ -37,8 +37,6 @@ from operations.saturation import *
 
 from util_planck import *
 
-from datetime import datetime
-
 class Exp():
     def __init__(self, img, title):
         self.img = img
@@ -64,24 +62,12 @@ def flatten_image(img,step=10):
 
 img = cv2.cvtColor(cv2.imread(f), cv2.COLOR_BGR2RGB)
 experiments = []
-date = datetime.now();
 experiments.append(Exp(img, "Input"))
-print datetime.now() - date;
-date = datetime.now();
 experiments.append(Exp(grey_world(img), "Grey world"))
-print datetime.now() - date;
-date = datetime.now();
 experiments.append(Exp(retinex(img), "Retinex"))
-print datetime.now() - date;
-date = datetime.now();
 experiments.append(Exp(retinex_adjust(img), "Retinex Adjust"))
-print datetime.now() - date;
-date = datetime.now();
 experiments.append(Exp(contrast(img,fac=2.), "Contrast:2"))
-print datetime.now() - date;
-date = datetime.now();
 experiments.append(Exp(contrast(img,fac=.5), "Contrast:.5"))
-print datetime.now() - date;
 
 ######################################### figure
 def plot_figure(experiments):
